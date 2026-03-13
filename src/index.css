@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: "Press Start 2P", monospace;
+  --font-retro: "VT323", monospace;
+}
+
+body {
+  background-color: #5c94fc; /* Mario sky blue */
+  color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Retro button shadow effect */
+.btn-retro {
+  box-shadow: 0 4px 0 #000000;
+  transition: all 0.1s;
+}
+.btn-retro:active {
+  box-shadow: 0 0 0 #000000;
+  transform: translateY(4px);
+}
+
+.pixel-border {
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+}
+
+@keyframes scrollBg {
+  from { background-position: 0 0; }
+  to { background-position: 400px 0; }
+}
+
+.bg-mario-clouds {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><path fill="rgba(255,255,255,0.6)" d="M30,70 Q30,50 50,50 Q60,30 80,30 Q100,30 110,50 Q130,50 130,70 Z"/></svg>');
+  background-size: 200px 100px;
+  animation: scrollBg 20s linear infinite;
+}
+
+.bg-ground {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><rect width="40" height="40" fill="%23c84c0c"/><rect width="40" height="4" fill="%23f8d8b0"/><rect width="4" height="40" fill="%23f8d8b0"/><rect x="36" y="4" width="4" height="36" fill="%23000000"/><rect x="4" y="36" width="36" height="4" fill="%23000000"/></svg>');
+  background-size: 40px 40px;
+}
